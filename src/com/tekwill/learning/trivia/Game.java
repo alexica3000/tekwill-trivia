@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Game {
     static boolean gameMenu = true;
     static boolean gameOver = true;
+    static int totalQuestions = 4;
     static int questionNumber = 1;
     static int questionScore = 0;
     static int totalScore = 0;
@@ -17,7 +18,7 @@ public class Game {
         String enter = scanner.nextLine();
 
         do {
-            if(enter.equals("START")) {
+            if(enter.equalsIgnoreCase("START")) {
                 System.out.println("Start game...");
                 do {
                     switch (questionNumber) {
@@ -36,7 +37,7 @@ public class Game {
                             System.out.println(Questions.LEVEL_1_QUESTION_2_ANSWER_2);
                             System.out.println(Questions.LEVEL_1_QUESTION_2_ANSWER_3);
                             System.out.println(Questions.LEVEL_1_QUESTION_2_ANSWER_4);
-                            questionCorrectAnswer = Questions.LEVEL_1_QUESTION_3_ANSWER_1;
+                            questionCorrectAnswer = Questions.LEVEL_1_QUESTION_2_ANSWER_3;
                             questionScore = Questions.LEVEL_1_QUESTION_2_SCORE;
                             break;
                         case 3:
@@ -62,9 +63,15 @@ public class Game {
                         gameOver = false;
                     }
 
+                    if (totalQuestions == questionNumber) {
+                        System.out.println("All the answers are correct.");
+                        gameOver = false;
+                        gameMenu = false;
+                    }
+
                 } while (gameOver);
 
-            } else if (enter.equals("EXIT")) {
+            } else if (enter.equalsIgnoreCase("EXIT")) {
                 System.out.println("End game...");
                 gameMenu = false;
             } else {
