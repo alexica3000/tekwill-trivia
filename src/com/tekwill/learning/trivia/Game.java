@@ -21,31 +21,33 @@ public class Game {
             if(enter.equalsIgnoreCase("START")) {
                 System.out.println("Start game...");
                 do {
+                    System.out.println("-----------------------------------------------------");
+
                     switch (questionNumber) {
                         case 1:
-                            System.out.println(Questions.LEVEL_1_QUESTION_1);
-                            System.out.println(Questions.LEVEL_1_QUESTION_1_ANSWER_1);
-                            System.out.println(Questions.LEVEL_1_QUESTION_1_ANSWER_2);
-                            System.out.println(Questions.LEVEL_1_QUESTION_1_ANSWER_3);
-                            System.out.println(Questions.LEVEL_1_QUESTION_1_ANSWER_4);
+                            System.out.println(questionNumber + ". " + Questions.LEVEL_1_QUESTION_1);
+                            System.out.println("\t" + Questions.LEVEL_1_QUESTION_1_ANSWER_1);
+                            System.out.println("\t" + Questions.LEVEL_1_QUESTION_1_ANSWER_2);
+                            System.out.println("\t" + Questions.LEVEL_1_QUESTION_1_ANSWER_3);
+                            System.out.println("\t" + Questions.LEVEL_1_QUESTION_1_ANSWER_4);
                             questionCorrectAnswer = Questions.LEVEL_1_QUESTION_1_ANSWER_1;
                             questionScore = Questions.LEVEL_1_QUESTION_1_SCORE;
                             break;
                         case 2:
-                            System.out.println(Questions.LEVEL_1_QUESTION_2);
-                            System.out.println(Questions.LEVEL_1_QUESTION_2_ANSWER_1);
-                            System.out.println(Questions.LEVEL_1_QUESTION_2_ANSWER_2);
-                            System.out.println(Questions.LEVEL_1_QUESTION_2_ANSWER_3);
-                            System.out.println(Questions.LEVEL_1_QUESTION_2_ANSWER_4);
+                            System.out.println(questionNumber + ". " + Questions.LEVEL_1_QUESTION_2);
+                            System.out.println("\t" + Questions.LEVEL_1_QUESTION_2_ANSWER_1);
+                            System.out.println("\t" + Questions.LEVEL_1_QUESTION_2_ANSWER_2);
+                            System.out.println("\t" + Questions.LEVEL_1_QUESTION_2_ANSWER_3);
+                            System.out.println("\t" + Questions.LEVEL_1_QUESTION_2_ANSWER_4);
                             questionCorrectAnswer = Questions.LEVEL_1_QUESTION_2_ANSWER_3;
                             questionScore = Questions.LEVEL_1_QUESTION_2_SCORE;
                             break;
                         case 3:
                             System.out.println(Questions.LEVEL_1_QUESTION_3);
-                            System.out.println(Questions.LEVEL_1_QUESTION_3_ANSWER_1);
-                            System.out.println(Questions.LEVEL_1_QUESTION_3_ANSWER_2);
-                            System.out.println(Questions.LEVEL_1_QUESTION_3_ANSWER_3);
-                            System.out.println(Questions.LEVEL_1_QUESTION_3_ANSWER_4);
+                            System.out.println("\t" + Questions.LEVEL_1_QUESTION_3_ANSWER_1);
+                            System.out.println("\t" + Questions.LEVEL_1_QUESTION_3_ANSWER_2);
+                            System.out.println("\t" + Questions.LEVEL_1_QUESTION_3_ANSWER_3);
+                            System.out.println("\t" + Questions.LEVEL_1_QUESTION_3_ANSWER_4);
                             questionCorrectAnswer = Questions.LEVEL_1_QUESTION_3_ANSWER_1;
                             questionScore = Questions.LEVEL_1_QUESTION_3_SCORE;
                             break;
