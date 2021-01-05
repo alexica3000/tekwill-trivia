@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class Game {
     static boolean gameMenu = true;
     static boolean gameOver = true;
-    static int totalQuestions = 4;
+    static int totalQuestions = 3;
     static int questionNumber = 1;
     static int questionScore = 0;
     static int totalScore = 0;
+    static int correctAnswers = 0;
     static String questionCorrectAnswer = "";
 
     public static void main(String[] args) {
@@ -43,7 +44,7 @@ public class Game {
                             questionScore = Questions.LEVEL_1_QUESTION_2_SCORE;
                             break;
                         case 3:
-                            System.out.println(Questions.LEVEL_1_QUESTION_3);
+                            System.out.println(questionNumber + ". " + Questions.LEVEL_1_QUESTION_3);
                             System.out.println("\t" + Questions.LEVEL_1_QUESTION_3_ANSWER_1);
                             System.out.println("\t" + Questions.LEVEL_1_QUESTION_3_ANSWER_2);
                             System.out.println("\t" + Questions.LEVEL_1_QUESTION_3_ANSWER_3);
@@ -56,20 +57,20 @@ public class Game {
                     String response = scanner.nextLine();
 
                     if (response.equalsIgnoreCase(questionCorrectAnswer)) {
-                        questionNumber++;
+                        correctAnswers++;
                         totalScore += questionScore;
                         System.out.println("Correct. Score is: " + totalScore);
                     } else {
                         System.out.println("Incorrect. You have " + totalScore);
-                        enter = "EXIT";
-                        gameOver = false;
                     }
 
                     if (totalQuestions == questionNumber) {
-                        System.out.println("All the answers are correct.");
+                        System.out.println(correctAnswers + " answers from " + totalQuestions + " are correct.");
                         gameOver = false;
                         gameMenu = false;
                     }
+
+                    questionNumber++;
 
                 } while (gameOver);
 
