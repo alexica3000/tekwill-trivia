@@ -17,6 +17,17 @@ public class Question {
     private int level;
     private String text;
 
+    /*
+     * connect to db
+     * write query
+     * select * from question; List<Question>
+     * for Question q : questions
+     *   select * from answer where question_id = q.id; List<Answer>
+     *   q.addAll(answer)
+     *
+     * List<Question> -> List<Answer>
+     * */
+
     public Question(Long id, List<Answer> answers, int score, int level, String text) {
         this(score, level, text, answers);
         this.id = id;
